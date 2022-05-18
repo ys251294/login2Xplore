@@ -1,0 +1,30 @@
+body {
+    background-color: beige;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5ff;
+    gap: 10vh;
+}
+
+.inputSentence {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+input[type="button"] {
+    flex: 0;
+    width: 10vh;
+    align-self: center;
+}
+
+#counter {
+    align-self: flex-end;
+}
