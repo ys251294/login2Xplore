@@ -15,7 +15,7 @@
         <h3>Instructions: </h3>
         <ul>
             <li>Write Sentence to get reorder in correct form</li>
-            <li>use following rules to make jumbled sentence:
+            <li>Use following rules to make jumbled sentence:
                 <ul>
                     <li>Use number inside words of a sentence which will be used to determine the place of words in
                         sentence.</li>
@@ -28,8 +28,18 @@
     <div class="main">
         <label for="sentence">Write sentence which adheres to rules mentions above.</label>
         <div class="inputSentence">
-            <input type="text" name="sentence" id="jumbledSentence">
-            <input type="button" value="Submit">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+            <label for="mobileno">Mobile No:</label>
+            <input type="text" name="mobileno" id="mobileno">
+            <label for="sentence">Jumbled Sentence:</label>
+            <input type="text" name="sentence" id="JumbledSentence">
+            <div>
+                <input type="button" value="Submit">
+                <input type="button" value="Retry">
+            </div>
         </div>
         <label for="example-result">Example Result: The quick brown fox jumps over the lazy dog.</label>
     </div>
