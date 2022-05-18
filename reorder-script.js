@@ -1,11 +1,9 @@
 'use strict';
 
-const str = 'is1 Ch2ristiano 3Ronaldo player6 foot5ball 4good';
-console.log(str);
 
-// Splitting string at ' '
+function reorder(sentence) {
 
-let words = str.split(" ");
+    let words = sentence.split(" ");
 // console.log(words);
 
 // for storing numbers present in words.
@@ -36,5 +34,4 @@ for(let i=0; i<9; i++){
         i = -1;
     }
 }
-
-console.log(result);
+}
