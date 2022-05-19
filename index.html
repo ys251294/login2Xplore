@@ -1,57 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sentence Reordering</title>
     <link rel="stylesheet" href="./main-style.css" />
-</head>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <h1>Sentence Reordering</h1>
-        <h3>Instructions: </h3>
-        <ul>
-            <li>Write Sentence to get reorder in correct form</li>
-            <li>Use following rules to make jumbled sentence:
-                <ul>
-                    <li>Use number inside words of a sentence which will be used to determine the place of words in
-                        sentence.</li>
-                    <li>Example : "fo4x Th1e 2quick t7he d9og. brown3 ju5mps o6ver la8zy"</li>
-                    <li>Numbers in words should be in continuous order starting from 1.</li>
-                </ul>
-            </li>
-        </ul>
+      <h1>Sentence Reordering</h1>
+      <h3>Instructions:</h3>
+      <p>Use following rules to make jumbled sentence:</p>
+      <ul>
+        <li>
+          Use number inside words of a sentence which will be used to determine
+          the place of words in sentence.
+        </li>
+        <li>
+          Example : "fo4x Th1e 2quick t7he d9og. brown3 ju5mps o6ver la8zy"
+        </li>
+        <li>Numbers in words should be in continuous order starting from 1.</li>
+        <li>Max words count in sentence is 9.</li>
+      </ul>
     </div>
     <div class="main">
-        <label for="sentence">Write sentence which adheres to rules mentions above.</label>
-        <div class="inputSentence">
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name">
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email">
-            <label for="mobileno">Mobile No:</label>
-            <input type="text" name="mobileno" id="mobileno">
-            <label for="sentence">Jumbled Sentence:</label>
-            <input type="text" name="sentence" id="JumbledSentence">
-            <div>
-                <input type="button" value="Submit">
-                <input type="button" value="Retry">
-            </div>
+      <form id="form">
+        <h3 class="title">Jumbled Sentence</h3>
+        <div>
+          <input
+            type="text"
+            name="name"
+            class="input"
+            placeholder="Your Name"
+            value=""
+            required
+          />
+          <label for="name" class="label">Name:</label>
         </div>
-        <label for="example-result">Example Result: The quick brown fox jumps over the lazy dog.</label>
+        <div>
+          <input
+            type="email"
+            name="email"
+            class="input"
+            placeholder="Your Email"
+            value=""
+            required
+          />
+          <label for="email" class="label">Email:</label>
+        </div>
+        <div>
+          <input
+            type="tel"
+            name="mobileno"
+            class="input"
+            placeholder="Your Mobile No"
+            value=""
+            required
+          />
+          <label for="mobileno" class="label">Mobile No:</label>
+        </div>
+        <div>
+          <textarea
+            cols="28"
+            rows="5"
+            name="jumbledSentence"
+            class="input"
+            placeholder="Jumbled Sentence"
+            value=""
+            required
+          ></textarea>
+          <label for="jumbledSentence" class="label">Jumbled Sentence:</label>
+        </div>
+        <input type="submit" id="submit" value="Submit" />
+        <input type="reset" id="retry" value="Retry" />
+      </form>
+    </div>
+    <div class="result-section">
+      <p>
+        <label class="rslt"> Result: </label>
+        <label id="result">The quick brown fox jumps over the lazy dog.</label>
+      </p>
     </div>
     <div class="counter-section">
-        <label>Total no of sentences corrected</label>
-        <div class="counter">
-            <h3 id="counter">0</h3>
-        </div>
-        <a href="./correted-sentences.html">Click here to check record of the sentences corrected</a>
+      <label>Total no of sentences corrected</label>
+      <div>
+        <h3 id="counter">1</h3>
+      </div>
+      <a href="#" id="checkRecords" onclick="recordsUpdate()">Click here to check record of the sentences corrected</a
+      >
     </div>
-    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
     <script src="./reorder-script.js"></script>
-</body>
-
+  </body>
 </html>
