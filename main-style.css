@@ -3,7 +3,7 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 25px;
     background-color: white;
     font-family: "lato", sans-serif;
 }
@@ -106,20 +106,22 @@ body {
     font-weight: 600;
 }
 
-h1{
-    text-align: center;
-    color: purple;
-    font-weight: 900;
-    font-size: 50px;
-}
-
 .header {
     display: flex;
     flex-flow: column wrap;
     align-content: center;
 }
+
 .header>*{
     margin: 0;
+}
+
+h1{
+    text-align: center;
+    color: purple;
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 50px;
 }
 
 .result-section {
